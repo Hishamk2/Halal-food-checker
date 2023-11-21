@@ -1,26 +1,90 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halal E-Code Checker</title>
     <link rel="stylesheet" href="css/styles.css">
+    <title> Halal E-Code Checker </title>
+    <style>
+        /* Add any additional styles or customize existing styles here */
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background: linear-gradient(to right, #4caf50, #45a049);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Card Styles */
+        .ecode-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* User Input Styles */
+        #eCodeInput {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #checkButton {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Halal E-Code Checker</h1>
-        <h1>HEY MARIAM, DO YOU LIKE THIS??????</h1>
-        <h1>HEY MARIAM DO YOU LIKES THIS??????</h1>
-        <p>Enter an E code to check its halal status:</p>
-        <!-- Input Field -->
-        <input type="text" id="eCodeInput" placeholder="Enter E code">
-        <!-- Check Button -->
-        <button id="checkButton">Check</button>
-        <!-- Result Display -->
-        <div id="result"></div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1> Welcome to the Halal E-Code Checker </h1>
+        <p>Enter an E code to check its halal status</p>
     </div>
+
+    <!-- User Input and Check Button -->
+    <div>
+        <p><i><b>DISCLAIMER: Verify the authenticatity of the e-codes yourself, this application IS NOT final yet, 
+                there can be bugs in the code generating improper results and the list from which the halal status is being used 
+                has NOT been verified. 
+                <br>This project is my personal project and is ONGOING</i></b></p>
+        <input type="text" id="eCodeInput" placeholder="Enter E code">
+        <button id="checkButton">Check</button>
+    </div>
+
+    <!-- Result Display -->
+    <div id="result"></div>
+
+    <!-- Script -->
     <script src="js/script.js"></script>
 </body>
 </html>
