@@ -1,6 +1,5 @@
-// script.js
-
-document.getElementById('checkButton').addEventListener('click', function () {
+// Function to handle E-Code checking
+function checkECode() {
     // Get user input
     var userInput = document.getElementById('eCodeInput').value.toLowerCase();
 
@@ -13,30 +12,37 @@ document.getElementById('checkButton').addEventListener('click', function () {
             return response.json();
         })
         .then(data => {
-            // Search function
-            function searchItem(query) {
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i]["Number"].toLowerCase() === query) {
-                        return data[i];
-                    }
-                }
-                return null;
-            }
+            // Filter the data based on user input
+            var filteredData = data.filter(item => item["Number"].toLowerCase() === userInput);
 
-            // Search and display result
-            var result = searchItem(userInput);
+            // Display result
             var resultDiv = document.getElementById('result');
-            if (result) {
-                resultDiv.innerHTML = `
-                    Item found:<br>
-                    Number: ${result['Number']}<br>
-                    Name: ${result['Name']}<br>
-                    Description: ${result['Description']}<br>
-                    Halal Status: ${result['HalalStatus']}
+            resultDiv.innerHTML = '';
+
+            if (filteredData.length > 0) {
+                // Display card for the matched E-Code
+                var matchedItem = filteredData[0];
+                resultDiv.innerHTML += `
+                    <div class="ecode-card">
+                        <h2>${matchedItem['Number']}</h2>
+                        <p>${matchedItem['Name']}</p>
+                        <p>${matchedItem['HalalStatus']}</p>
+                    </div>
                 `;
             } else {
-                resultDiv.innerHTML = 'Item not found.';
+                resultDiv.innerHTML = 'E-Code not found.';
             }
         })
         .catch(error => console.error('Error fetching JSON:', error));
+}
+
+// Event listener for 'click' on the Check button
+document.getElementById('checkButton').addEventListener('click', checkECode);
+
+// Event listener for 'keypress' on the input field
+document.getElementById('eCodeInput').addEventListener('keypress', function (event) {
+    // Check if the pressed key is 'Enter' (key code 13)
+    if (event.key === 'Enter') {
+        checkECode();
+    }
 });
