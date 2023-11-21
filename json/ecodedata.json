@@ -1,11 +1,5 @@
 [
   {
-    "Number": "Number",
-    "Name": "Name",
-    "Description": "Description",
-    "HalalStatus": "Halal Status"
-  },
-  {
     "Number": "E100",
     "Name": "Curcumin/Turmeric",
     "Description": "Color",
@@ -602,14 +596,8 @@
   {
     "Number": "E332",
     "Name": "Potassium Citrates",
-    "Description": "Miscellaneous - \nCitric Acid and its",
+    "Description": "Miscellaneous - \nCitric Acid and its salts",
     "HalalStatus": "Halal"
-  },
-  {
-    "Number": "",
-    "Name": "",
-    "Description": "Salts",
-    "HalalStatus": ""
   },
   {
     "Number": "E333",
@@ -786,12 +774,6 @@
     "HalalStatus": "Halal"
   },
   {
-    "Number": "",
-    "Name": "",
-    "Description": "derivatives",
-    "HalalStatus": ""
-  },
-  {
     "Number": "E461",
     "Name": "Methylcellulose",
     "Description": "Emulsifiers and  \nStabilizers - \nCellulose and  \nderivatives",
@@ -880,12 +862,6 @@
     "Name": "Stearyl Tartrate",
     "Description": "Emulsifiers and  \nStabilizers - salts or  Esters of Fatty Acids",
     "HalalStatus": "Mushbooh, Halal if it is from plant fat,  Haraam if it is from pork fat"
-  },
-  {
-    "Number": "Number",
-    "Name": "Name",
-    "Description": "DESCRIPTION",
-    "HalalStatus": "HALAL STATUS"
   },
   {
     "Number": "107",
@@ -1366,12 +1342,6 @@
     "Name": "Sodium Guanylate",
     "Description": "Miscellaneous - Flavour  Enhancers",
     "HalalStatus": "Halal if it is obtained from  sardines or baker's yeast  extract. Mushbooh if it is  made from brewer yeast  extract, a by-product of beer"
-  },
-  {
-    "Number": "",
-    "Name": "",
-    "Description": "",
-    "HalalStatus": "making"
   },
   {
     "Number": "631",
